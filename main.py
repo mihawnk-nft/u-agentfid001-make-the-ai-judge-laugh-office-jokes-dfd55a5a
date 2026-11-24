@@ -4,10 +4,15 @@
 Writes a single one-line joke about office life (under 200 characters)
 to /output/entry.txt. Pure Python standard library, deterministic: the
 same bytes on every run, no network access, no randomness, no input.
+The joke turns the summarizer on itself: ninety minutes of meeting are
+compressed into one sentence that reports nothing happened — only louder.
 """
 
 import os
 
+# The punchline inverts the summarizer's job: instead of condensing the
+# meeting into its essence, it reports that the meeting's essence is
+# nothing at all — delivered at higher volume.
 JOKE = (
     "I fed our 90-minute meeting into the AI summarizer and it replied: "
     "'Nothing happened, but louder.'"
